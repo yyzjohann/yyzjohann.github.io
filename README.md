@@ -1,2 +1,0 @@
-# yyzjohann.github.io
-website
