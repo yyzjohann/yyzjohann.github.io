@@ -1,0 +1,11 @@
+*~
+*_region_*
+*.log
+*.aux
+*.dvi
+*.out
+*.pdf
+*.toc
+*.bbl
+*.blg
+*#
