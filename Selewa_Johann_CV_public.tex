@@ -1,0 +1,184 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LaTeX Template: Curriculum Vitae
+%
+% Source: http://www.howtotex.com/
+% Feel free to distribute this template, but please keep the
+% referal to HowToTeX.com.
+% Date: July 2011
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% How to use writeLaTeX: 
+%
+% You edit the source code here on the left, and the preview on the
+% right shows you the result within a few seconds.
+%
+% Bookmark this page and share the URL with your co-authors. They can
+% edit at the same time!
+%
+% You can upload figures, bibliographies, custom classes and
+% styles using the files menu.
+%
+% If you're new to LaTeX, the wikibook is a great place to start:
+% http://en.wikibooks.org/wiki/LaTeX
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[paper=a4,fontsize=11pt]{scrartcl} % KOMA-article class
+							
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[protrusion=true,expansion=true]{microtype}
+\usepackage{amsmath,amsfonts,amsthm}     % Math packages
+\usepackage{graphicx}                    % Enable pdflatex
+\usepackage[svgnames]{xcolor}            % Colors by their 'svgnames'
+\usepackage{geometry}
+	\textheight=700px                    % Saving trees ;-)
+        \usepackage{url}
+        \usepackage{hyperref}
+
+\frenchspacing              % Better looking spacings after periods
+\pagestyle{empty}           % No pagenumbers/headers/footers
+
+%%% Custom sectioning (sectsty package)
+%%% ------------------------------------------------------------
+\usepackage{sectsty}
+
+\sectionfont{%			            % Change font of \section command
+	\usefont{OT1}{phv}{b}{n}%		% bch-b-n: CharterBT-Bold font
+	\sectionrule{0pt}{0pt}{-5pt}{3pt}}
+
+%%% Macros
+%%% ------------------------------------------------------------
+\newlength{\spacebox}
+\settowidth{\spacebox}{8888888888}			% Box to align text
+\newcommand{\sepspace}{\vspace*{1em}}		% Vertical space macro
+
+\newcommand{\MyName}[1]{ % Name
+		\Huge \usefont{OT1}{phv}{b}{n} \hfill #1
+		\par \normalsize \normalfont}
+		
+\newcommand{\MySlogan}[1]{ % Slogan (optional)
+		\large \usefont{OT1}{phv}{m}{n}\hfill \textit{#1}
+		\par \normalsize \normalfont}
+
+\newcommand{\NewPart}[1]{\section*{\uppercase{#1}}}
+
+\newcommand{\PersonalEntry}[2]{
+		\noindent\hangindent=2em\hangafter=0 % Indentation
+		\parbox{\spacebox}{        % Box to align text
+		\textit{#1}}		       % Entry name (birth, address, etc.)
+		\hspace{1.5em} #2 \par}    % Entry value
+
+\newcommand{\SkillsEntry}[2]{      % Same as \PersonalEntry
+		\noindent\hangindent=2em\hangafter=0 % Indentation
+		\parbox{\spacebox}{        % Box to align text
+		\textit{#1}}			   % Entry name (birth, address, etc.)
+		\hspace{1.5em} #2 \par}    % Entry value	
+		
+\newcommand{\EducationEntry}[4]{
+		\noindent \textbf{#1} \hfill      % Study
+		\colorbox{Black}{%
+			\parbox{6em}{%
+			\hfill\color{White}#2}} \par  % Duration
+		\noindent \textit{#3} \par        % School
+		\noindent\hangindent=2em\hangafter=0 \small #4 % Description
+		\normalsize \par}
+
+\newcommand{\WorkEntry}[4]{				  % Same as \EducationEntry
+		\noindent \textbf{#1} \hfill      % Jobname
+		\colorbox{Black}{\color{White}#2} \par  % Duration
+		\noindent \textit{#3} \par              % Company
+		\noindent\hangindent=2em\hangafter=0 \small #4 % Description
+		\normalsize \par}
+
+%%% Begin Document
+%%% ------------------------------------------------------------
+\begin{document}
+% you can upload a photo and include it here...
+%\begin{wrapfigure}{l}{0.5\textwidth}
+%	\vspace*{-2em}
+%		\includegraphics[width=0.15\textwidth]{photo}
+%\end{wrapfigure}
+
+\MyName{Johann Selewa}
+\MySlogan{Curriculum Vitae}
+
+\sepspace
+
+%%% Personal details
+%%% ------------------------------------------------------------
+\NewPart{Personal details}{}
+
+\PersonalEntry{Birth}{May 4, 1992}
+\PersonalEntry{Residence}{Stockholm, Sweden}
+\PersonalEntry{Phone}{0704483982}
+\PersonalEntry{Mail}{\href{mailto:yyzjohann@gmail.com}{yyzjohann@gmail.com}}
+\PersonalEntry{LinkedIn}{\href{https://www.linkedin.com/in/johann-selewa-aaaa15158/}{My profile}}
+\PersonalEntry{GitHub}{\href{https://github.com/yyzjohann}{My GitHub (password is not included here)}}
+\PersonalEntry{Website}{\href{https://yyzjohann.github.io}{My personal website}}
+
+%%% Education
+%%% ------------------------------------------------------------
+\NewPart{Education}{}
+
+\EducationEntry{Bachelor's degree in mathematics}{Autumn 2013-- Spring 2017}{Stockholm University}{Pure mathematics with courses in economics, computer science, and probability theory. Bachelor thesis in algebra and combinatorics under the supervision of Jörgen Backelin.}
+
+\EducationEntry{Master's degree in mathematics}{Autumn 2016 -- Autumn2020}{Stockholm University}{Pure mathematics with courses in computer science (not included in the degree; see below). I presented my master's thesis on modular forms and Galois representations in June 2018, written under the supervision of Wushi Goldring.} 
+
+%%% Work experience
+%%% ------------------------------------------------------------
+\NewPart{Work}{}
+
+\WorkEntry{Homework assistance}{April 2013-September 2015}{MyAcademy, Part-time}{Duties included meeting elementary and high school students and helping them with their homeworks.}
+
+\WorkEntry{Teaching assistant in mathematics and computer science}{November 2015-August 2019}{Department of mathematics at Stockholm University, Part-time}{Duties include teaching at the blackboard, assisting students' self-studies, supervising homework and lab presentations, and correcting homeworks, labs, and exams.}
+\sepspace
+
+\WorkEntry{Teaching assistant in computer science}{September 2016-January 2017}{The Royal Technical Institute/NADA, Part-time}{First course in Computer Science at the Computer Science programme. Duties as in the previous point.}
+
+\WorkEntry{Coordinator of studies, technical support}{2 September 2019- 31 August 2020}{Stockholm University Department of Mathematics, full time}{The duties were split between coordinating the first-semester courses in mathematics, and administrating the course websites and the digital learning platform WebWork, as well as acting as technical support. At the same time taking courses at an average pace of 85\%.}
+
+\WorkEntry{Currently}{Sepember 2020 - }{}{Applying for jobs, while working on my personal projects.}
+
+\NewPart{Other}
+
+\WorkEntry{Active in student councils}{September 2013-January 2017}{}{Vice chairman at the economics department. Chairman at the mathematics department. Responsibilites included arrangements of job fairs and study visits, and participation in department board meetings. At the math department I proposed the pass card system which is now in use.}
+
+\WorkEntry{PhD Seminar}{12/4-2019}{Stockholm University}{About modular forms and Galois representations; see \href{https://www.math-stockholm.se/kalender/johann-selewa-modular-forms-and-galois-representations-1.894047}{``Stockholm Mathematics Center calendar for details''}.}
+
+\WorkEntry{PhD Seminar}{4/10-2019}{Stockholm University}{About Stanley-Reisner rings of abstract simplical complexes; see \href{https://www.math-stockholm.se/kalender/johann-selewa-stanley-reisner-rings-of-abstract-simplicial-complexes-1.927681}{``Stockholm Mathematics Center calendar for details''}.}
+
+
+
+
+%%% Skills
+%%% ------------------------------------------------------------
+\NewPart{Computer Science}{}
+
+Between 2018 and 2020 I took computer science courses, beside studying for my degree in mathematics and working at the university. I completed the following, all at KTH:  Two courses in algorithms and complexity (of which one on advanced level),  an advanced level course each in machine learning and artificial intelligence, and an advanced level course in cryptography.
+
+I have also completed the lab exercises in one advanced level course each for computer security, and software safety and security (both at KTH).
+
+\NewPart{Software}{}
+
+Below I list the software and computer languages I have worked with enough to be comfortable with.
+
+Python, Java, Haskell, Prolog, Latex, Bash/Zsh, Lisp (scheme and e-lisp), Javascript (including node.js and json), HTML, CSS, PHP, MySQL, C/C++, Git.
+
+\NewPart{Repositories}
+
+I keep a private BitBucket account where I keep all my working projects. Because of infringement concerns, I publish my finished projects as password protected zip files on my public GitHub profile (see link above, or \href{https://github.com/yyzjohann}{here}). The password is not included in this public version of my CV.
+
+
+\NewPart{Languages}{}
+
+I am studying my second semester of russian (45 finished credits), and have studied half a semester (15 credits) of french at Stockholm University. I studied spanish through ninth grade and high school.
+
+\SkillsEntry{}{Maternal or fluent: Swedish, English, (East) Assyrian}
+\SkillsEntry{}{Basic: Russian, French, Spanish}
+
+
+%%% References
+%%% ------------------------------------------------------------
+\NewPart{References}{}
+Available upon request
+\end{document}
