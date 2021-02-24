@@ -14,10 +14,22 @@
           padding-top: 60px;
           padding-bottom: 40px;
       }
-
-      .cannolo {
-          float:right;
+      
+      span {
+          vertical-align:middle;
+          display:table-cell;          
       }
+      img {
+          float:right;
+          vertical-align: middle;
+      
+      }
+      figcaption {
+          float:right;
+          vertical-align: middle;
+      
+      }
+
     </style>
     <link href="bootstrap-responsive.css" rel="stylesheet">
 
@@ -48,7 +60,7 @@
           <div class="nav-collapse collapse">
             <ul class="nav">
               <!-- <li class="active"><a href="#">Home</a></li> -->
-              <li><a href="#about">About</a></li>
+              <li><a href="math.html">A math thing</a></li>
               <li><a href="music.html">Music</a></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
@@ -78,19 +90,20 @@
       <!-- Main frame -->
       <div class="hero-unit">
         <h1>Welcome!</h1>
-        
-        <!-- <p>This is my little website, where I share my interests and stuff, which includes music, programming, and maybe some mathematics (although I do a lot less of everything than I would like). Also I love turtles more than anything in the world.</p> -->
-
-        <!-- <p> You can see above for some <a href="music.html">music tips</a>, <a href="sr.html">a small math project</a> I don't think anyone has really investigated, and just some stuff in general.</p> -->
 
         
+        <span>
+          <p>This is my little website, where I share my interests, which include music, programming, and maybe some mathematics, and some other stuff. Also I love turtles more than anything in the world.</p>
+
+          <p> Scroll down, or check the links above, to see more.</p>
+        </span>        
         
-        
-        <figure style="text-align:right;">
-          <img src="cannolo.jpeg" width="40%" height="40%" alt="Me in Rome in July 2018 with a cannolo and a bag of italian liquor.">
-          <figcaption> Me in Rome in July 2018 with a cannolo and a bag of italian liquor </figcaption>        
+        <span>
+        <figure>
+          <img src="cannolo.jpeg" width="60%" height="60%" alt="Me in Rome in July 2018 with a cannolo and a bag of italian liquor.">
+          <figcaption> Me in Rome in July 2018 with a cannolo and a bag of italian liquor. </figcaption>        
         </figure>
-        
+        </span>
         
         <!-- <p><a href="#" class="btn btn-primary btn-large">Learn more »</a></p> -->
       </div>
@@ -128,7 +141,7 @@
 
     </div> <!-- /container -->
 
-    <!-- Le javascript
+    <!-- The javascript
          ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="jquery.js"></script>
